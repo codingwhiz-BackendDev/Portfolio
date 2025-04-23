@@ -1,12 +1,17 @@
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emmanuel Oluyemi | Backend Developer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Clicker+Script&display=swap"
+        rel="stylesheet">
 
     <!--==== Style Switcher ====-->
     <link rel="stylesheet" href="css/style-switcher.css">
@@ -18,6 +23,14 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="text">Loading</span>
+            <span class="spinner"></span>
+        </div>
+    </div>
+
     <!--==== Main container Start ====-->
     <div class="main-container">
 
@@ -35,29 +48,60 @@
                 <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
                 <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
                 <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#achievements"><i class="fa fa-trophy"></i>Achievements</a></li>
+                <li><a href="#experience"><i class="fa fa-briefcase"></i>Experience</a></li>
+                <li><a href="#portfolio"><i class="fa fa-laptop-code"></i>Portfolio</a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
+            <div class="social-links">
+                <a href="https://github.com/codingwhiz-BackendDev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/emmanuel-oluyemi-9116a4300/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/IAmCodingWhiz?t=pVVtCIdG1hkD9CQO1aRt1Q&s=09" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
         </div>
         <!--==== Aside End ====-->
-        <!--==== Mian Content Start ====-->
+        <!--==== Main Content Start ====-->
 
         <div class="main-content">
             <!--==== Home Section Start =====-->
-            <section class="home section" id="home">
+            <section class="home section active" id="home">
                 <div class="container">
                     <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hello, my name is <span class="name">Emmanuel Oluyemi</span></h3>
-                            <h3 class="my-profession">I'm a <span class="typing" id="typing-text">web developer</span>
+                        <div class="home-info padd-15" data-aos="fade-right" data-aos-duration="1000">
+                            <p class="hello-subtitle">Welcome to my world</p>
+                            <h1 class="hello">Hello, I'm <span class="name">Emmanuel Oluyemi</span></h1>
+                            <h3 class="my-profession">I'm a <span class="typing" id="typing-text">Backend
+                                    Developer</span>
                             </h3>
-                            <p>I'm a web developer with an extensive experience of over 3 years. My expertise is to
+                            <p class="home-description">I'm a web developer with extensive experience of over 3 years.
+                                My expertise is to
                                 create functional websites mostly focusing on backend, APIs and many more...
                             </p>
-                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                            <div class="">
+                                <a href="#contact" class="btn hire-me">Hire Me</a>
+                                <a href="#portfolio" class="btn btn-outline">My Work</a>
+                            </div>
+                            <div class="scroll-down">
+                                <a href="#about" class="mouse-wrapper">
+                                    <span>Scroll Down</span>
+                                    <span class="mouse">
+                                        <span class="wheel"></span>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="home-img padd-15">
-                            <img src="images/hero.jpg" alt="">
+                        <div class="home-img padd-15" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="img-box">
+                                <img src="images/hero.jpg" alt="Emmanuel Oluyemi">
+                                <div class="experience-badge">
+                                    <div class="badge-content">
+                                        <span class="years">3+</span>
+                                        <span class="exp-text">Years of Experience</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,34 +111,33 @@
             <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
-                        <div class="section-title padd-15">
+                        <div class="section-title padd-15" data-aos="fade-up">
                             <h2>About Me</h2>
+                            <span class="subtitle">My introduction</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="about-content padd-15">
                             <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I'm Emmanuel Oluyemi a <span>web developer</span></h3>
+                                <div class="about-text padd-15" data-aos="fade-up" data-aos-delay="100">
+                                    <h3>I'm Emmanuel Oluyemi, a <span>Backend Developer</span></h3>
                                     <p>As a passionate web developer with strong focus on backend development, I
-                                        specialize is crafting scalable, efficient and reliable web applications using
-                                        Django and JavaScript. With a solid foundation in computer science and a keen
-                                        eye
-                                        for detail,
-                                        I excel at building robust backend systems that power fast, secure and engaging
-                                        web
-                                        experiences
+                                        specialize in crafting scalable, efficient and reliable web applications using
+                                        Django, React and JavaScript. With a solid foundation in computer science and a
+                                        keen eye for detail, I excel at building robust backend systems that power fast,
+                                        secure and engaging
+                                        web experiences.
                                     </p>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="personal-info padd-15">
+                                <div class="personal-info padd-15" data-aos="fade-up" data-aos-delay="200">
                                     <div class="row">
                                         <div class="info-item padd-15">
-                                            <p>Birthday: <span>24th september 2005</span></p>
+                                            <p>Birthday: <span>24th September 2005</span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Email: <span>oluyemiemma 2409@gmail.com</span></p>
+                                            <p>Email: <span>oluyemiemma2409@gmail.com</span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Phone: <span>+234 80 7284 6035</span></p>
@@ -111,52 +154,59 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#" class="btn">Download CV</a>
+                                            <a href="#" class="btn" download>Download CV</a>
                                             <a href="#contact" class="btn hire-me">Hire Me</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="skills padd-15">
+                                <div class="skills padd-15" data-aos="fade-up" data-aos-delay="300">
                                     <div class="row">
                                         <div class="skill-item padd-15">
                                             <h5>HTML</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 100%;"></div>
+                                                <div class="progress-in" style="width: 100%;" data-value="100"></div>
                                                 <div class="skill-percent">100%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>CSS</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 75%;"></div>
+                                                <div class="progress-in" style="width: 0%;" data-value="75"></div>
                                                 <div class="skill-percent">75%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>JavaScript</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 80%;"></div>
+                                                <div class="progress-in" style="width: 0%;" data-value="80"></div>
                                                 <div class="skill-percent">80%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>Python</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 85%;"></div>
+                                                <div class="progress-in" style="width: 0%;" data-value="85"></div>
                                                 <div class="skill-percent">85%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>MySql</h5>
+                                            <h5>Django</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 80%;"></div>
+                                                <div class="progress-in" style="width: 0%;" data-value="85"></div>
+                                                <div class="skill-percent">90%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>MySQL</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 0%;" data-value="80"></div>
                                                 <div class="skill-percent">80%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>React</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 70%;"></div>
+                                                <div class="progress-in" style="width: 0%;" data-value="70"></div>
                                                 <div class="skill-percent">70%</div>
                                             </div>
                                         </div>
@@ -164,7 +214,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="education padd-15">
+                                <div class="education padd-15" data-aos="fade-up" data-aos-delay="400">
                                     <h3 class="title">Education</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
@@ -173,25 +223,24 @@
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa calendar"></i>2023 - 2027
+                                                        <i class="fa fa-calendar"></i>2023 - 2027
                                                     </h3>
-                                                    <h4 class="timeline-title">Bsc in Computer Science</h4>
+                                                    <h4 class="timeline-title">BSc in Computer Science</h4>
                                                     <p class="timeline-text">
-                                                        I am currently studying Computer Science in the Redeemer's
+                                                        I am currently studying Computer Science at the Redeemer's
                                                         University Ede.
-                                                        I started my program here october 26 2023 and is expected to be
-                                                        done
-                                                        by God's grace
-                                                        in the year 2027.
-                                                        I am currently in my second year of study
+                                                        I started my program here October 26, 2023 and am expected to
+                                                        graduate
+                                                        by God's grace in the year 2027.
+                                                        I am currently in my second year of study.
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience</h3>
+                                <div class="experience padd-15" data-aos="fade-up" data-aos-delay="500">
+                                    <h3 class="title">Coding Journey</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
@@ -199,20 +248,20 @@
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa calendar"></i>2021 - till date
+                                                        <i class="fa fa-calendar"></i>2021 - Present
                                                     </h3>
-                                                    <h4 class="timeline-title">Bsc in Computer Science</h4>
+                                                    <h4 class="timeline-title">Self-Taught Developer</h4>
                                                     <p class="timeline-text">
-                                                        I started programming September 2021. In my 3+ years of
-                                                        experience I
-                                                        have worked on so many personal projects using Django and
-                                                        JavaScript.
-                                                        This include both frontend and backend projects(from simple to
+                                                        I started programming in September 2021. In my 3+ years of
+                                                        experience, I have worked on many personal projects using Django
+                                                        and
+                                                        JavaScript. These include both frontend and backend projects
+                                                        (from simple to
                                                         complex), from websites that download social media videos, to
-                                                        socail
-                                                        media apps
-                                                        qr code generators ,chat applications, Google clone, Note App
-                                                        etc..
+                                                        social
+                                                        media apps, QR code generators, chat applications, Google clone,
+                                                        Note App,
+                                                        and more.
                                                     </p>
                                                 </div>
                                             </div>
@@ -222,168 +271,424 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
             <!--==== About Section End =====-->
             <!--==== Services Section Start =====-->
             <section class="service section" id="services">
                 <div class="container">
                     <div class="row">
-                        <div class="section-title padd-15">
+                        <div class="section-title padd-15" data-aos="fade-up">
                             <h2>Services</h2>
+                            <span class="subtitle">What I offer</span>
                         </div>
                     </div>
                     <div class="row">
                         <!--====== Service Item Start ======-->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" data-aos="zoom-in" data-aos-delay="100">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-laptop-code"></i>
                                 </div>
-                                <h4>Web Developer</h4>
-                                <p>I am an experienced web developer. I build scalable and functional web applications
-                                </p>
+                                <h4>Web Development</h4>
+                                <p>I build scalable and functional web applications with modern technologies and best
+                                    practices.</p>
                             </div>
                         </div>
                         <!--====== Service Item End ======-->
                         <!--====== Service Item Start ======-->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" data-aos="zoom-in" data-aos-delay="200">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-code"></i>
                                 </div>
-                                <h4>Backed Engineer</h4>
-                                <p>I design , build and maintain backend & server-side applications
-                                </p>
+                                <h4>Backend Engineering</h4>
+                                <p>I design, build and maintain robust backend & server-side applications with focus on
+                                    performance and security.</p>
                             </div>
                         </div>
                         <!--====== Service Item End ======-->
                         <!--====== Service Item Start ======-->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" data-aos="zoom-in" data-aos-delay="300">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-spider"></i>
                                 </div>
                                 <h4>Web Scraping & Automation</h4>
-                                <p>I use python to scrape websites and automate tasks </p>
+                                <p>I use Python to scrape websites and automate repetitive tasks, saving time and
+                                    increasing productivity.</p>
                             </div>
                         </div>
                         <!--====== Service Item End ======-->
                         <!--====== Service Item Start ======-->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" data-aos="zoom-in" data-aos-delay="400">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-plug"></i>
                                 </div>
-                                <h4>Api Development</h4>
-                                <p>I am currently on a journey to Api development in order to design, develop reliable
-                                    Apis
-                                </p>
+                                <h4>API Development</h4>
+                                <p>I design and develop reliable, well-documented APIs that enable seamless integration
+                                    between systems.</p>
                             </div>
                         </div>
                         <!--====== Service Item End ======-->
                     </div>
-
                 </div>
             </section>
             <!--==== Services Section End =====-->
+
+            <!--==== Achievements Section Start =====-->
+            <section class="achievements section" id="achievements">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15" data-aos="fade-up">
+                            <h2>Achievements</h2>
+                            <span class="subtitle">My success story</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="achievements-content">
+                            <!-- Achievement Item Start -->
+                            <div class="achievement-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h3>Completed 20+ Projects</h3>
+                                    <p>Successfully designed, developed, and deployed over 20 web applications ranging
+                                        from simple websites to complex full-stack applications.</p>
+                                </div>
+                            </div>
+                            <!-- Achievement Item End -->
+
+                            <!-- Achievement Item Start -->
+                            <div class="achievement-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h3>Python Developer Certification</h3>
+                                    <p>Earned certification in Python development, demonstrating proficiency in building
+                                        applications with Python and related frameworks.</p>
+                                </div>
+                            </div>
+                            <!-- Achievement Item End -->
+
+                            <!-- Achievement Item Start -->
+                            <div class="achievement-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h3>Growing Online Community</h3>
+                                    <p>I am regularly active on X and linkedin where i share my success story, learning
+                                        progress
+                                        and struggles as a 19 year old Nigrian programmer.</p>
+                                </div>
+                            </div>
+                            <!-- Achievement Item End -->
+
+                            <!-- Achievement Item Start -->
+                            <div class="achievement-item" data-aos="fade-up" data-aos-delay="400">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-code-branch"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h3>Open Source Contributions</h3>
+                                    <p>Contributed to open-source projects, helping improve code quality and adding new
+                                        features to community-driven software.</p>
+                                </div>
+                            </div>
+                            <!-- Achievement Item End -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--==== Achievements Section End =====-->
+
+            <!--==== Work Experience Section Start =====-->
+            <section class="work-experience section" id="experience">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15" data-aos="fade-up">
+                            <h2>Work Experience</h2>
+                            <span class="subtitle">My professional journey</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="experience-timeline">
+                            <!-- Experience Item Start -->
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="experience-dot"></div>
+                                <div class="experience-content shadow-dark">
+                                    <div class="year"><i class="fa fa-calendar"></i> 2023 - Present</div>
+                                    <h3>Freelance Backend Developer</h3>
+                                    <h4>Self-employed</h4>
+                                    <p>Working with clients to develop custom web applications with a focus on backend
+                                        functionality. Building RESTful APIs, database design, and server-side logic
+                                        using Django and Python.</p>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>Django</span>
+                                        <span>MySQL</span>
+                                        <span>API Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Item End -->
+
+                            <!-- Experience Item Start -->
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="experience-dot"></div>
+                                <div class="experience-content shadow-dark">
+                                    <div class="year"><i class="fa fa-calendar"></i> 2022 - 2023</div>
+                                    <h3>Web Developer Intern</h3>
+                                    <h4>Tech Startup in my University</h4>
+                                    <p>Assisted in developing and maintaining web applications. Worked on both frontend
+                                        and backend components, focusing on implementing features and fixing bugs.</p>
+                                    <div class="tech-stack">
+                                        <span>HTML/CSS</span>
+                                        <span>JavaScript</span>
+                                        <span>Python</span>
+                                        <span>Git</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Item End -->
+
+                            <!-- Experience Item Start -->
+                            <div class="experience-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="experience-dot"></div>
+                                <div class="experience-content shadow-dark">
+                                    <div class="year"><i class="fa fa-calendar"></i> 2021 - 2022</div>
+                                    <h3>Personal Projects</h3>
+                                    <h4>Self-learning</h4>
+                                    <p>Developed multiple personal projects to enhance skills and build a portfolio.
+                                        Created web applications including social media platforms, utility tools, and
+                                        content management systems.</p>
+                                    <div class="tech-stack">
+                                        <span>Django</span>
+                                        <span>JavaScript</span>
+                                        <span>React</span>
+                                        <span>HTML/CSS</span>
+                                        <span>Database Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Item End -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--==== Work Experience Section End =====-->
 
             <!--==== Portfolio Section Start  =====-->
             <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
-                        <div class="section-title padd-15">
+                        <div class="section-title padd-15" data-aos="fade-up">
                             <h2>Portfolio</h2>
+                            <span class="subtitle">My recent work</span>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Last Projects: click description to view them</h2>
+                        <div class="portfolio-filter padd-15" data-aos="fade-up" data-aos-delay="100">
+                            <button type="button" class="active" data-filter="all">All</button>
+                            <button type="button" data-filter="web">Web Apps</button>
+                            <button type="button" data-filter="api">API</button>
+                            <button type="button" data-filter="tool">Tools</button>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row portfolio-items">
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="web" data-aos="zoom-in" data-aos-delay="100">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/Hey.png" alt="">
-                                    <h4><a href="https://coding74whiz.pythonanywhere.com">A chat Application like
-                                            WhatsApp</a>
-                                    </h4>
+                                    <img src="images/portfolio/Hey.png" alt="Chat Application">
+                                    <div class="portfolio-overlay">
+                                        <h4>Chat Application</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://coding74whiz.pythonanywhere.com" target="_blank"><i
+                                                    class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/Hey.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>A WhatsApp-like chat application with real-time messaging
+                                            Did this like a year ago
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
 
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="web" data-aos="zoom-in" data-aos-delay="200">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/RunSchoolHub.png" alt="">
-                                    <h4><a href="https://runschoolhub.pythonanywhere.com">A social media website</a>
-                                    </h4>
+                                    <img src="images/portfolio/RunSchoolHub.png" alt="Social Media Website">
+                                    <div class="portfolio-overlay">
+                                        <h4>Social Media Platform</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://runschoolhub.pythonanywhere.com" target="_blank"><i
+                                                    class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/RunSchoolHub.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>A social media website for connecting students in my University</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
 
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="web" data-aos="zoom-in" data-aos-delay="600">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/WhisperZone.png" alt="">
-                                    <h4><a href="https://whisperzone.pythonanywhere.com">A website where you can send
-                                            anonymous messges</a></h4>
+                                    <img src="images/portfolio/VidScribe.png" alt="Text to Speech">
+                                    <div class="portfolio-overlay">
+                                        <h4>VoiceWeave</h4>
+                                        <div class="portfolio-links">
+                                            <a href="" target="_blank"><i class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/VidScribe.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>A website to transcribe videos, translate videos to other langugage,
+                                            generate subtitles and summarize videos with Ai. </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
 
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="web" data-aos="zoom-in" data-aos-delay="300">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/Google.png" alt="">
-                                    <h4><a href="https://codingwhizgoogle.pythonanywhere.com">A Google Clone</a></h4>
+                                    <img src="images/portfolio/WhisperZone.png" alt="Anonymous Messaging">
+                                    <div class="portfolio-overlay">
+                                        <h4>Anonymous Messaging</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://whisperzone.pythonanywhere.com" target="_blank"><i
+                                                    class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/WhisperZone.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>A platform for sending anonymous messages</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
 
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="tool" data-aos="zoom-in"
+                            data-aos-delay="600">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/Qr genie.png" alt="">
-                                    <h4><a href="https://qr-genie-sigma.vercel.app/">A qr generator. Quickly generate qr
-                                            codes for your websites.</a></h4>
+                                    <img src="images/portfolio/DjangoQuickstart.png" alt="Text to Speech">
+                                    <div class="portfolio-overlay">
+                                        <h4>VoiceWeave</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://pypi.org/project/django-quickstart-setup/"
+                                                target="_blank"><i class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/DjangoQuickstart.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>A python package that automates creating of python Django projects,
+                                            heps setup Project, App, Templats,Static, media and configure all the
+                                            settings.py and urls
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
 
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="web" data-aos="zoom-in" data-aos-delay="400">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/VoiceWeave.png" alt="">
-                                    <h4><a href="https://voice-weave.vercel.app/">Read texts instead of readin them with
-                                            VoiceWeave</a></h4>
+                                    <img src="images/portfolio/Google.png" alt="Google Clone">
+                                    <div class="portfolio-overlay">
+                                        <h4>Google Clone</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://codingwhizgoogle.pythonanywhere.com" target="_blank"><i
+                                                    class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/Google.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>A functional Google search engine clone</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
 
                         <!--==== Portfolio Item Start  =====-->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" data-category="tool" data-aos="zoom-in"
+                            data-aos-delay="500">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/SpeedyDownload.png" alt="">
-                                    <h4>A website that downloads social media videos</h4>
+                                    <img src="images/portfolio/Qr genie.png" alt="QR Generator">
+                                    <div class="portfolio-overlay">
+                                        <h4>QR Code Generator</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://qr-genie-sigma.vercel.app/" target="_blank"><i
+                                                    class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/Qr genie.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>Generate QR codes quickly for websites and text</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--==== Portfolio Item End  =====-->
+
+                        <!--==== Portfolio Item Start  =====-->
+                        <div class="portfolio-item padd-15" data-category="tool" data-aos="zoom-in"
+                            data-aos-delay="600">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="images/portfolio/VoiceWeave.png" alt="Text to Speech">
+                                    <div class="portfolio-overlay">
+                                        <h4>VoiceWeave</h4>
+                                        <div class="portfolio-links">
+                                            <a href="https://voice-weave.vercel.app/" target="_blank"><i
+                                                    class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/VoiceWeave.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>Convert text to speech with this handy web application</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--==== Portfolio Item End  =====-->
+
+                        <!--==== Portfolio Item Start  =====-->
+                        <div class="portfolio-item padd-15" data-category="tool" data-aos="zoom-in"
+                            data-aos-delay="700">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="images/portfolio/SpeedyDownload.png" alt="Social Media Downloader">
+                                    <div class="portfolio-overlay">
+                                        <h4>SpeedyDownload</h4>
+                                        <div class="portfolio-links">
+                                            <a href="#" target="_blank"><i class="fa fa-link"></i></a>
+                                            <a href="images/portfolio/SpeedyDownload.png" class="portfolio-details"><i
+                                                    class="fa fa-plus"></i></a>
+                                        </div>
+                                        <p>Download videos from various social media platforms</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==== Portfolio Item End  =====-->
                     </div>
+                </div>
             </section>
             <!--==== Portfolio Section End =====-->
 
@@ -391,103 +696,76 @@
             <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
-                        <div class="section-title padd-15">
+                        <div class="section-title padd-15" data-aos="fade-up">
                             <h2>Contact Me</h2>
+                            <span class="subtitle">Get in touch</span>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15">IN NEED OF A DEVELOPER ?</h3>
-                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
+                    <h3 class="contact-title padd-15" data-aos="fade-up" data-aos-delay="100">IN NEED OF A DEVELOPER?
+                    </h3>
+                    <h4 class="contact-sub-title padd-15" data-aos="fade-up" data-aos-delay="200">I'M AT YOUR SERVICE
+                    </h4>
                     <div class="row">
                         <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon">
                                 <i class="fa fa-phone"></i>
                                 <h4>Call Me On</h4>
-                                <p><a href="tel:+234 807 284 6035">Call</a></p>
+                                <p><a href="tel:+234 807 284 6035">+234 807 284 6035</a></p>
                             </div>
                         </div>
                         <!--==== Contact info item end =====-->
 
                         <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" data-aos="fade-up" data-aos-delay="400">
                             <div class="icon">
                                 <i class="fa fa-envelope"></i>
                                 <h4>Email</h4>
-                                <p><a href="mailto:oluyemiemma249@gmail.com">send mail</a></p>
+                                <p><a href="mailto:oluyemiemma2409@gmail.com">oluyemiemma2409@gmail.com</a></p>
                             </div>
                         </div>
                         <!--==== Contact info item end =====-->
 
                         <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" data-aos="fade-up" data-aos-delay="500">
                             <div class="icon">
                                 <i class="fab fa-linkedin"></i>
-                                <h4>Check me on Linkedin</h4>
+                                <h4>LinkedIn</h4>
                                 <p><a href="https://www.linkedin.com/in/emmanuel-oluyemi-9116a4300/"
-                                        target="_blank">Check</a></p>
+                                        target="_blank">Emmanuel Oluyemi</a></p>
                             </div>
                         </div>
                         <!--==== Contact info item end =====-->
 
                         <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" data-aos="fade-up" data-aos-delay="600">
                             <div class="icon">
                                 <i class="fab fa-github"></i>
-                                <h4>Check me on Github</h4>
-                                <p><a href="https://github.com/codingwhiz-BackendDev" target="_blank">Check</a></p>
-                            </div>
-                        </div>
-                        <!--==== Contact info item end =====-->
-
-                        <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon">
-                                <i class="fab fa-facebook"></i>
-                                <h4>Check me on Facebook</h4>
-                                <p><a href="https://www.facebook.com/profile.php?id=61564465731930"
-                                        target="_blank">Check</a></p>
-                            </div>
-                        </div>
-                        <!--==== Contact info item end =====-->
-
-                        <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon">
-                                <i class="fab fa-whatsapp"></i>
-                                <h4>Check me on WhatsApp</h4>
-                                <p><a href="https://wa.me/2348072846035">check</a></p>
-                            </div>
-                        </div>
-                        <!--==== Contact info item end =====-->
-
-                        <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon">
-                                <i class="fab fa-twitter"></i>
-                                <h4>Check me on X</h4>
-                                <p><a href="https://x.com/IAmCodingWhiz?t=pVVtCIdG1hkD9CQO1aRt1Q&s=09"
-                                        target="_blank">check</a></p>
-                            </div>
-                        </div>
-                        <!--==== Contact info item end =====-->
-
-                        <!--==== Contact info item start =====-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon">
-                                <i class="fab fa-instagram"></i>
-                                <h4>Check me on Instagram</h4>
-                                <p><a href="https://www.instagram.com/e8060097?igsh=YzIjYTk1ODg3Zg=="
-                                        target="_blank">check</a></p>
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/codingwhiz-BackendDev"
+                                        target="_blank">codingwhiz-BackendDev</a></p>
                             </div>
                         </div>
                         <!--==== Contact info item end =====-->
                     </div>
-                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO EMAILS</h4>
+                    <div class="row">
+                        <div class="contact-social padd-15" data-aos="fade-up" data-aos-delay="700">
+                            <a href="https://www.facebook.com/profile.php?id=61564465731930" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/2348072846035" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://x.com/IAmCodingWhiz?t=pVVtCIdG1hkD9CQO1aRt1Q&s=09" target="_blank"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/e8060097?igsh=YzIjYTk1ODg3Zg==" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15" data-aos="fade-up" data-aos-delay="800">SEND ME AN EMAIL</h3>
+                    <h4 class="contact-sub-title padd-15" data-aos="fade-up" data-aos-delay="900">I'M VERY RESPONSIVE TO
+                        EMAILS</h4>
 
                     <!--==== Contact Form =====-->
                     <div class="row">
-                        <div class="contact-form padd-15">
+                        <div class="contact-form padd-15" data-aos="fade-up" data-aos-delay="1000">
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
@@ -510,8 +788,8 @@
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <textarea name="" item id="message" class="form-control" placeholder="Message"
-                                            id=""></textarea>
+                                        <textarea name="" id="message" class="form-control"
+                                            placeholder="Message"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -522,16 +800,12 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </section>
             <!--==== Contact Section End =====-->
         </div>
         <!--==== Main Content End ====-->
     </div>
-
-
     <!--==== Main container End ====-->
 
     <!--==== Style Switcher Start ====-->
@@ -540,7 +814,7 @@
             <i class="fas fa-cog fa-spin"></i>
         </div>
         <div class="day-night s-icon">
-            <i class="fas"></i>
+            <i class="fas fa-moon"></i>
         </div>
         <h4>Theme Colors</h4>
         <div class="colors">
@@ -554,6 +828,8 @@
     <!--==== Style Switcher End ====-->
 
     <!--==== JS files ====-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
 </body>
