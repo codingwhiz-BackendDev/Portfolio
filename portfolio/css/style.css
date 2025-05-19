@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Clicker+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Clicker+Script&display=swap");
 
 :root {
     --bg-black-900: #f2f2f2fc;
@@ -20,8 +20,9 @@ body.dark {
 body {
     line-height: 1.5;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    background-color: var(--bg-black-900);
 }
 
 * {
@@ -53,44 +54,105 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
 }
 
 .preloader .loader {
-    display: inline-block;
     position: relative;
-    width: 80px;
-    height: 80px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .preloader .loader .text {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
     color: var(--skin-color);
     letter-spacing: 2px;
+    position: relative;
+    animation: pulse 1.5s ease infinite;
+}
+
+/* Add dots animation to the loading text */
+.preloader .loader .text::after {
+    content: "...";
+    position: absolute;
+    width: 24px;
+    text-align: left;
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: ".";
+    }
+
+    40% {
+        content: "..";
+    }
+
+    60%,
+    100% {
+        content: "...";
+    }
 }
 
 .preloader .loader .spinner {
-    width: 60px;
-    height: 60px;
-    border: 4px solid transparent;
-    border-top-color: var(--skin-color);
+    width: 70px;
+    height: 70px;
+    border: 5px solid var(--bg-black-50);
     border-radius: 50%;
+    border-top-color: var(--skin-color);
     animation: spin 1s linear infinite;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Add this to make the preloader fade out smoothly */
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Main Container */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Main Content */
+.main-content {
+    padding-left: 270px;
+    width: 100%;
+    min-height: 100vh;
+    display: block !important;
+    opacity: 1 !important;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 /* Section */
@@ -105,12 +167,6 @@ ul {
 
 .hidden {
     display: none !important;
-}
-
-.main-content {
-    padding-left: 270px;
-    width: 100%;
-    transition: all 0.3s ease;
 }
 
 .padd-15 {
@@ -145,7 +201,7 @@ ul {
 }
 
 .section-title h2::before {
-    content: '';
+    content: "";
     height: 4px;
     width: 50px;
     background-color: var(--skin-color);
@@ -156,7 +212,7 @@ ul {
 }
 
 .section-title h2::after {
-    content: '';
+    content: "";
     height: 4px;
     width: 25px;
     background-color: var(--skin-color);
@@ -252,12 +308,12 @@ ul {
 }
 
 .aside .logo a span {
-    font-family: 'Clicker Script', cursive;
+    font-family: "Clicker Script", cursive;
     font-size: 40px;
 }
 
 .aside .logo a::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 20px;
     height: 20px;
@@ -268,7 +324,7 @@ ul {
 }
 
 .aside .logo a::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 20px;
     height: 20px;
@@ -309,7 +365,7 @@ ul {
 }
 
 .aside .nav-toggler span::before {
-    content: '';
+    content: "";
     height: 2px;
     width: 18px;
     background: var(--skin-color);
@@ -325,7 +381,7 @@ ul {
 }
 
 .aside .nav-toggler span::after {
-    content: '';
+    content: "";
     height: 2px;
     width: 18px;
     background: var(--skin-color);
@@ -428,7 +484,7 @@ h1.hello {
 }
 
 h1.hello .name {
-    font-family: 'Clicker Script', cursive;
+    font-family: "Clicker Script", cursive;
     font-size: 55px;
     font-weight: 700;
     color: var(--skin-color);
@@ -525,7 +581,7 @@ h3.my-profession {
 }
 
 .home .home-img .img-box::after {
-    content: '';
+    content: "";
     height: 80px;
     position: absolute;
     border-bottom: 10px solid var(--skin-color);
@@ -536,7 +592,7 @@ h3.my-profession {
 }
 
 .home .home-img .img-box::before {
-    content: '';
+    content: "";
     height: 80px;
     position: absolute;
     border-top: 10px solid var(--skin-color);
@@ -761,7 +817,7 @@ h3.my-profession {
 }
 
 .about .about-content .timeline .timeline-item::before {
-    content: '';
+    content: "";
     width: 1px;
     position: absolute;
     height: 100%;
@@ -939,7 +995,7 @@ h3.my-profession {
 }
 
 .experience-timeline::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 2px;
     background-color: var(--skin-color);
@@ -1031,11 +1087,13 @@ h3.my-profession {
     padding-bottom: 40px;
 }
 
-.portfolio-filter {
-    flex: 0 0 100%;
-    max-width: 100%;
-    text-align: center;
+.portfolio .portfolio-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
 }
 
 .portfolio-filter button {
@@ -1062,7 +1120,7 @@ h3.my-profession {
 }
 
 .portfolio-filter button.active::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 50%;
     height: 2px;
@@ -1396,6 +1454,77 @@ h3.my-profession {
     background: #f021b2;
 }
 
+/* Portfolio Modal */
+.portfolio-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portfolio-modal-content {
+    background: var(--bg-black-100);
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-modal-content .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: var(--text-black-900);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portfolio-modal-content .close-modal:hover {
+    color: var(--skin-color);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio-modal-content img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.portfolio-modal-content p {
+    color: var(--text-black-700);
+    line-height: 1.7;
+}
+
 /* Responsive */
 @media (max-width: 1199px) {
     .aside {
@@ -1658,35 +1787,3 @@ h3.my-profession {
         padding: 0 40px;
     }
 }
-
-/* Animation for skill bars */
-.about .about-content .skills .skill-item .progress .progress-in {
-    width: 0;
-    animation: none;
-}
-
-/* Add this to your script.js to animate skill bars when they come into view */
-/* 
-document.addEventListener('DOMContentLoaded', function() {
-    // Animate skill bars when they come into view
-    const skillBars = document.querySelectorAll('.progress-in');
-    
-    function animateSkillBars() {
-        skillBars.forEach(bar => {
-            const rect = bar.getBoundingClientRect();
-            const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
-            
-            if (isVisible) {
-                const value = bar.getAttribute('data-value');
-                bar.style.width = value + '%';
-            }
-        });
-    }
-    
-    // Initial check
-    animateSkillBars();
-    
-    // Check on scroll
-    window.addEventListener('scroll', animateSkillBars);
-});
-*/
