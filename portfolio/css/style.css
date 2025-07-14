@@ -935,6 +935,143 @@ h3.my-profession {
     padding-bottom: 40px;
 }
 
+/* Achievement Category Titles */
+.achievement-category-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.achievement-category-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--skin-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Hackathon Section */
+.hackathon-section {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.hackathon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.hackathon-item {
+    background: var(--bg-black-100);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--bg-black-50);
+}
+
+.hackathon-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hackathon-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.hackathon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hackathon-item:hover .hackathon-image img {
+    transform: scale(1.05);
+}
+
+.achievement-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--skin-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-badge.runner-up {
+    background: #ff9500;
+}
+
+.achievement-badge.participant {
+    background: #007bff;
+}
+
+.achievement-badge.special {
+    background: #28a745;
+}
+
+.hackathon-info {
+    padding: 25px;
+}
+
+.hackathon-info h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 8px;
+}
+
+.event-date {
+    color: var(--skin-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hackathon-info p {
+    color: var(--text-black-700);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-used span {
+    background: var(--bg-black-50);
+    color: var(--text-black-700);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* General Achievements */
+.general-achievements {
+    width: 100%;
+}
+
 .achievements-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1584,6 +1721,10 @@ h3.my-profession {
         grid-template-columns: 1fr;
     }
 
+    .hackathon-grid {
+        grid-template-columns: 1fr;
+    }
+
     h1.hello {
         font-size: 40px;
     }
@@ -1670,6 +1811,27 @@ h3.my-profession {
 
     .experience-content h4 {
         font-size: 15px;
+    }
+
+    .hackathon-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hackathon-item {
+        margin-bottom: 20px;
+    }
+
+    .hackathon-info {
+        padding: 20px;
+    }
+
+    .hackathon-info h4 {
+        font-size: 18px;
+    }
+
+    .achievement-category-title {
+        font-size: 24px;
     }
 }
 
@@ -1785,5 +1947,39 @@ h3.my-profession {
     .contact .contact-form .btn {
         height: 45px;
         padding: 0 40px;
+    }
+
+    .hackathon-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .hackathon-item {
+        margin-bottom: 15px;
+    }
+
+    .hackathon-image {
+        height: 150px;
+    }
+
+    .hackathon-info {
+        padding: 15px;
+    }
+
+    .hackathon-info h4 {
+        font-size: 16px;
+    }
+
+    .hackathon-info p {
+        font-size: 13px;
+    }
+
+    .achievement-category-title {
+        font-size: 20px;
+    }
+
+    .tech-used span {
+        font-size: 10px;
+        padding: 3px 8px;
     }
 }
